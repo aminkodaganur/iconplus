@@ -1,0 +1,515 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>s&i | Flat long Shadow and icon Generator</title>
+<head>
+  <!--////////// Sass Compass /////////////////////-->
+  <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+  <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+   <!--////////// End of Sass Compass /////////////////////-->
+   <link rel="stylesheet" type="text/css" href="api/materialize.min.css">
+   
+   <link rel="stylesheet" href="stylesheets/page-main.css" />   
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+   <link rel="stylesheet" type="text/css" href="api/animate.css" />
+</head>
+<body>
+	<div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo"> icon+ </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="javascript:void(0)" class="am-modal-trigger" data-am-target="#examples-modal">Sample <span class="brand-font">icon+</span></a></li>
+                    <li><a href="javascript:void(0)" class="waves-effect am-modal-trigger" data-am-target="#blog-modal">Feedback</a></li>
+                    <li style="background-color:#e74c3c;height: 45px;">
+                    	<a href="javascript:void(0)" class="waves-effect am-modal-trigger" id="btn-get-code" data-am-target="#codeModal">
+                        	<strong>Get Code</strong>
+                        </a>
+                    </li>
+                    <li style="background-color:#2980b9;height: 45px;"> 
+                    	<a href="javascript:void(0)" class="waves-effect am-modal-trigger" id="preview" data-am-target="#downloadModal">
+                        	<!---->
+                        	<strong>Download as SVG</strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+	<div class="row">
+    	<div class="col s12 m3 l3">
+            <div class="control-panel">
+            	
+            	<div class="main-head">Box Shadow</div>
+                <section class="box-shadow-section"> 
+                	
+                    <div class="row">
+                    	<div class="col s6">
+                        	<div class="action-title">Bg Color</div>
+                        	<input placeholder="#E9E9E9" id="bx-back-color" type="text" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="E.g : #E9E9E9" />
+                        </div>
+                        <div class="col s6">
+                        	<div class="action-title">Fade</div>
+                            <div class="switch">
+                                <label>
+                                    Off
+                                    <input type="checkbox" id="bx-fade-flag" checked >
+                                    <span class="lever"></span>
+                                    On
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                    	<div class="col s12">
+                        	<div class="action-title">Box-Style</div>
+                        	<input name="bx-shape" type="radio" id="test1" value="10" checked />
+      						<label for="test1">Rectangle</label>
+                            
+                            <input name="bx-shape" type="radio" id="test2" value="300" />
+      						<label for="test2">Circle</label>
+                            
+                            <input name="bx-shape" type="radio" id="test3" value="0" />
+      						<label for="test3">Square</label>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                    	<div class="col s12">
+                        	<div class="action-title">Shadow length</div>
+                            <form oninput="amount.value=bxshadowlength.value">
+                            	<div class="row">
+                                	<div class="col s2">
+                                     	<div class="value-holder">
+                                			<output name="amount" for="bxshadowlength"> 120 </output>
+                                        </div>
+                                     </div>
+                    				<div class="col s10">
+                                		<input type="range" id="bx-shadow-length" name="bxshadowlength" min="0" max="250" value="120">
+                                     </div>
+                                </div>
+                            </form>
+                        </div>
+                     </div>
+                     
+                     <div class="row">
+                        <div class="col s12">
+                        	<div class="action-title">Shadow Opacity</div>
+                            <form oninput="amount.value=bxopacity.value">
+                            	<div class="row">
+                                	<div class="col s2">
+                                     	<div class="value-holder">
+                                			<output name="amount" for="bxopacity"> 20 </output>
+                                        </div>
+                                     </div>
+                    				<div class="col s10">
+                                		<input type="range" id="bx-opacity" name="bxopacity" min="0" max="100" value="20">
+                                     </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>    
+                    
+                    <div class="row">
+                    	<div class="col s12">
+                        	<div class="action-title">Shadow Position</div>
+                                <select class="browser-default" id="bx-rotation">
+                                    <option value="D" selected>Default</option>
+                                    <option value="0">Bottom</option>
+                                    <option value="1">Bottom right</option>
+                                    <option value="1.57">Right</option>
+                                    <option value="2">Top right</option>
+                                    <option value="3.15">Top</option>
+                                    <option value="4">Top left</option>
+                                    <option value="4.72">Left</option>
+                                    <option value="5.5">Left bottom</option>
+                                </select>
+                        </div>
+                    </div>
+                      
+                </section>
+                <div class="main-head">Text Shadow</div>
+                <section class="text-shadow-section">
+                	
+                    <div class="row">
+                    	<div class="col s6">
+                        	<div class="action-title">Bg Color</div>
+                        	<input placeholder="#1A84CC" id="text-back-color" type="text" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="E.g : #E9E9E9"/>
+                        </div>
+                        <div class="col s6">
+                        	<div class="action-title">Fade</div>
+                            <div class="switch">
+                                <label>
+                                    Off
+                                    <input type="checkbox" id="text-fade-flag" checked>
+                                    <span class="lever"></span>
+                                    On
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                     <div class="row">
+                    	<div class="col s12">
+                        	<div class="action-title">Shadow length</div>
+                            <form oninput="amount.value=textshadowlength.value">
+                            	<div class="row">
+                                	<div class="col s2">
+                                     	<div class="value-holder">
+                                			<output name="amount" for="textshadowlength"> 120 </output>
+                                        </div>
+                                     </div>
+                    				<div class="col s10">
+                                		<input type="range" id="text-shadow-length" name="textshadowlength" min="0" max="250" value="120">
+                                     </div>
+                                </div>
+                            </form>
+                        </div>
+                     </div>
+                     
+                     <div class="row">
+                        <div class="col s12">
+                        	<div class="action-title">Shadow Opacity</div>
+                            <form oninput="amount.value=textopacity.value">
+                            	<div class="row">
+                                	<div class="col s2">
+                                     	<div class="value-holder">
+                                			<output name="amount" for="textopacity"> 15 </output>
+                                        </div>
+                                     </div>
+                    				<div class="col s10">
+                                		<input type="range" id="text-opacity" name="textopacity" min="0" max="100" value="15">
+                                     </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>    
+                    
+                    <div class="row">
+                    	<div class="col s12">
+                        	<div class="action-title">Shadow Position</div>
+                                <select class="browser-default" id="text-rotation">
+                                    <option value="D" selected>Default</option>
+                                    <option value="0">Bottom</option>
+                                    <option value="1">Bottom right</option>
+                                    <option value="1.57">Right</option>
+                                    <option value="2">Top right</option>
+                                    <option value="3.15">Top</option>
+                                    <option value="4">Top left</option>
+                                    <option value="4.72">Left</option>
+                                    <option value="5.5">Left bottom</option>
+                                </select>
+                        </div>
+                    </div>
+                
+                </section>
+                <div class="main-head more-option-btn">Customize</div>
+                <section class="more-option-cnt">
+                	
+                    <div class="row">
+                    	<div class="col s12">
+                        	<div class="action-title">Text Or font-awesome Icon</div>
+                            <input type="text" id="dynamic-text" placeholder="e.g: <i class='fa fa-plane'></i>" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="e.g: <i class='fa fa-plane'></i> Or Text" />
+                        	
+                        </div>
+                    </div>
+                    <div class="row">
+                    	<div class="col s8">
+                            <div class="action-title">Font Color</div>
+                            <input type="text" id="font-color" placeholder="#ffffff" />
+                        </div>
+                        <div class="col s4">
+                        	<div class="action-title">OutLine</div>
+                        	<input type="checkbox" id="outline" />
+      						<label for="outline">Outline </label>
+                        </div>
+                    </div>
+                    
+                	<div class="row">
+                    	<div class="col s12">
+                            <div class="action-title">Box Size</div>
+                            <form oninput="amount.value=boxsize.value">
+                                <div class="row">
+                                    <div class="col s2">
+                                        <div class="value-holder">
+                                            <output name="amount" for="boxsize"> 220 </output>
+                                        </div>
+                                     </div>
+                                    <div class="col s10">
+                                        <input type="range" id="boxsize" name="boxsize" min="0" max="800" value="220">
+                                     </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                    	<div class="col s12">
+                            <div class="action-title">Font Size</div>
+                            <form oninput="amount.value=fontsize.value">
+                                <div class="row">
+                                    <div class="col s2">
+                                        <div class="value-holder">
+                                            <output name="amount" for="fontsize"> 115 </output>
+                                        </div>
+                                     </div>
+                                    <div class="col s10">
+                                        <input type="range" id="fontsize" name="fontsize" min="0" max="300" value="115">
+                                     </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                    	<div class="col s12">
+                        	<div class="action-title">Font weight</div>
+                        	<input name="fontweight" type="radio" id="test4" value="100" />
+      						<label for="test4">100</label>
+                            
+                            <input name="fontweight" type="radio" id="test5" value="300" />
+      						<label for="test5">300</label>
+                            
+                            <input name="fontweight" type="radio" id="test6" value="500" />
+      						<label for="test6">500</label>
+                        </div>
+                    </div>
+                    
+                </section>
+                <!--<section class="btn-section">
+                	<div class="row">
+                    	<div class="col s6">
+                        	<a class="waves-effect waves-light btn red">Get Code</a>
+                        </div>
+                        <div class="col s6">
+                        	<a class="waves-effect waves-light btn red">Get Image</a>
+                        </div>
+                    </div>                
+                </section>-->
+                
+             </div>
+             
+        </div>
+    	<div class="col s12 m9 l9 win-height">        	
+        	<div class="c-valign-wrapper">
+            	<div class="c-valign" id="gen-Icon">
+                
+                	<div id="box" class="box-shadow c-valign-wrapper">
+                    	<div id="text" class="text-shadow c-valign">
+                        		Fs
+                        </div>
+                    </div> 
+                    
+                </div>
+            </div>
+            <div class="footer">sdknfksdbkjsbd</div>
+            <div class="developer">
+            	<a href="https://in.linkedin.com/in/aminkodaganur" target="_blank" class="waves-effect">By : Amin Kodaganur</a>
+            </div>
+        </div>
+    </div>
+	
+    <!--<section id="how-to-use">
+    	<div class="row">
+        	<div class="container">
+            	sdfdf
+            </div>
+        </div>
+    </section>-->
+    <!--####################### Modals ##############################-->
+    <div class="am-modal animated" id="examples-modal">
+        <div class="am-header">
+        	<h3>Some of the cool sample icons created using <i class="brand-font">icon+</i> </h3>
+            <a href="javascript:void(0);" class="am-close">X</a>
+        </div>
+        <div class="am-body">
+        	
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <div class="slider-cnt item1">
+                        	<div class="items-cnt">
+                                <div class="item-box-shadow">
+                                    <div class="item-text-shadow">Fs</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caption center-align">
+                          	<h5 class="light grey-text text-lighten-3" style="color:rgba(53,53,53,1.00) !important;">Add text and box shadow</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-cnt item2">
+                        	<div class="items-cnt">
+                            	<div class="item-text-shadow">Awesome</div>
+                            </div>
+                        </div>
+                        <div class="caption center-align">
+                          	<h5 class="light grey-text text-lighten-3">Add long-shadow to text and make font as line font</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-cnt item3">
+                        	<div class="items-cnt">
+                            	<div class="item-text-shadow"><i class="fa fa-pied-piper-alt"></i></div>
+                            </div>
+                        </div>
+                        <div class="caption center-align">
+                          	<h5 class="light grey-text text-lighten-3">Add effect to Font Awesome icons too</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-cnt item4">
+                        	<div class="items-cnt">
+                                <div class="item-box-shadow">
+                                    <div class="item-text-shadow"><i class="fa fa-map-signs"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caption center-align">
+                          	<h5 class="light grey-text text-lighten-3">You can make Font Awesome icons as line icon</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-cnt item5">
+                        	<div class="items-cnt">
+                                <div class="item-box-shadow">
+                                    <div class="item-text-shadow"><i class="fa fa-send-o"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caption center-align">
+                          	<h5 class="light grey-text text-lighten-3" style="color:rgba(53,53,53,1.00) !important;">You can choose direction of shadow</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-cnt item6">
+                        	<div class="items-cnt">
+                            	<div class="item-text-shadow">JavaScript</div>
+                            </div>
+                        </div>
+                        <div class="caption center-align">
+                          	<h5 class="light grey-text text-lighten-3">Design font however you want</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-cnt item7">
+                        	<div class="items-cnt">
+                            	<div class="item-text-shadow"><i class="fa fa-heart-o"></i></div>
+                            </div>
+                        </div>
+                        <div class="caption center-align">
+                          	<h5 class="light grey-text text-lighten-3">Express your feeling with <i class="brand-font">icon+</i></h5>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-cnt item8">
+                        	<div class="items-cnt">
+                            	<div class="item-text-shadow"><i class="fa fa-fighter-jet"></i></div>
+                            </div>
+                        </div>
+                        <div class="caption center-align">
+                          	<h5 class="light grey-text text-lighten-3">Now flay jet with proper direction ;)</h5>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="am-modal animated" id="blog-modal">
+        <div class="am-header">
+        	<h3>Give Feedback or Say Thanks <span>If you got any issue please search or write in Github <a href="#">Issues</a></span> </h3>
+            <a href="javascript:void(0);" class="am-close">X</a>
+        </div>
+        <div class="am-body">
+        		<div id="disqus_thread"></div>
+				<script>
+                /**
+                * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                */
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                
+                s.src = '//iconplus.disqus.com/embed.js';
+                
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+    
+    <div class="am-modal animated" id="codeModal">
+    
+    	<div class="am-header">
+        	<h3>Just Copy & Paste this code and you're done !! <span> If you got any issue please search or write in Github <a href="#">Issues</a></span> </h3>
+            <a href="javascript:void(0);" class="am-close">X</a>
+        </div>
+        
+        <div class="am-body">
+        	<div class="code_view_titel">HTML <span>paste this HTML code into your website</span></div>
+            <div class="code_view">
+            	<span id="copyhtml">Copy</span>
+                <pre id="html-code">
+                
+                </pre>
+            </div>
+            <br>
+            <div class="code_view_titel">CSS <span>paste this CSS code into your website</span></div>
+            <div class="code_view">
+            	<span id="copycss">Copy</span>
+                <pre id="css-code">
+                
+                </pre>
+            </div>
+        </div>
+    
+    </div>
+    
+    <div class="am-modal animated" id="downloadModal">
+    
+    	<div class="am-header">
+        	<h3>Your <i class="brand-font">icon+</i> is ready to download !! <span> Note:if you want to apply box-shadow to this icon you need to copy box-shadow from 'Get Code' option</span> </h3>
+            <a href="javascript:void(0);" class="am-close">X</a>
+        </div>
+        
+        <div class="am-body">
+        	
+            <div class="icon-preview">
+            	
+            </div>
+            <div class="download-icon-btn-cnt">
+            	<a href="javascript:void(0);" id="downloadimage" class="waves-effect"><i class="fa fa-download"> Download</i></a>
+            </div>
+        </div>
+    
+    </div>
+    
+    <!--#############################################################-->
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="api/materialize.min.js"></script>
+<script src="js/shadow-gen.js"></script>
+<script src="js/main.js"></script>
+<script src="api/am-modal.js"></script>
+<script>
+$(document).ready(function(e) {
+    $('.modal-trigger').leanModal();
+	$('.slider').slider({full_width: false});
+});
+</script>
+</body>
+</html>
