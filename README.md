@@ -41,8 +41,3 @@ Download as SVG:  This option will Export a SVG file and you can download it on 
 	This project is under <a href="https://opensource.org/licenses/MIT">MIT</a> open source license.
     And No one is allowed to make any kind of API of this as I will be doing it soon ;)
 	
-
-
-
-
-
