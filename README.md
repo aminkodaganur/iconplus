@@ -10,14 +10,14 @@ Produce icons with extra effect like long shadow, flat shadow, box effect, circl
 -	Adjustable opacity for shadow
 -	Different Box-radius styles like circle, Square, rounded Square.
 -	You can select shadow direction too 
-o	Bottom, 
-o	Bottom right, 
-o	Right,
-o	Top right, 
-o	Top, 
-o	Top left, 
-o	Left,
-o	Left bottom 
+	-	Bottom, 
+	-	Bottom right, 
+	-	Right,
+	-	Top right, 
+	-	Top, 
+	-	Top left, 
+	-	Left,
+	-	Left bottom 
 -	You can have custom text with custom font color and box color
 -	You can even have font-awesome icon tag or Google Materialized icon tag  
 -	You can make font , font-awesome icon  and Google Materialized icon as line icon
