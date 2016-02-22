@@ -38,6 +38,6 @@ Get Code: This option will generate code to be pasted on your web application. P
 Download as SVG:  This option will Export a SVG file and you can download it on your local. You just need have one <img src=”SVG_File_Path.svg” /> tag on your web application wherever you want to render the icon.
 
 #License:
-	This project is under <a href="https://opensource.org/licenses/MIT">MIT</a> open source license.
+	This project is released under <a href="https://opensource.org/licenses/MIT/"> MIT </a> open source license.
     And No one is allowed to make any kind of API of this as I will be doing it soon ;)
 	
