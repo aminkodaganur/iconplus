@@ -33,9 +33,9 @@ Produce icons with extra effect like long shadow, flat shadow, box effect, circl
 
 -	Step2: 
      Find “Get Code” or “Download as SVG” button on menu bar and click on any one option
-Get Code: This option will generate code to be pasted on your web application. Paste HTML code wherever you want to render the icon and paste CSS code in style tag in head tag.
+     Get Code: This option will generate code to be pasted on your web application. Paste HTML code wherever you want to render the icon and paste CSS code in style tag in head tag.
 
-Download as SVG:  This option will Export a SVG file and you can download it on your local. You just need have one img src=”SVG_File_Path.svg”  tag on your web application wherever you want to render the icon.
+     Download as SVG:  This option will Export a SVG file and you can download it on your local. You just need have one img src=”SVG_File_Path.svg”  tag on your web application wherever you want to render the icon.
 
 #License:
     This project is released under MIT(read : https://opensource.org/licenses/MIT/) open source license.
