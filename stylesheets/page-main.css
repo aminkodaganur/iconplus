@@ -50,7 +50,7 @@ nav .brand-logo {
   position: absolute;
   /* bottom: 0px; */
   right: 10px;
-  top: 94%;
+  top: 92%;
 }
 /* line 46, ../sass/page-main.scss */
 .developer a {
@@ -537,4 +537,27 @@ pre {
 .slider .indicators {
   position: relative;
   margin-top: 15px;
+}
+
+/* line 1903, ../sass/page-main.scss */
+.discription p, .discription ul li {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* line 1908, ../sass/page-main.scss */
+.discription h3 {
+  font-size: 34px;
+}
+
+/* line 1912, ../sass/page-main.scss */
+.discription ul {
+  padding-left: 40px;
+  list-style-type: inherit;
+  list-style: inherit;
+}
+
+/* line 1918, ../sass/page-main.scss */
+.discription ul li {
+  list-style-type: inherit;
 }

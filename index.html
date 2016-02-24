@@ -18,13 +18,19 @@
    <link rel="stylesheet" href="stylesheets/page-main.css" />   
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
    <link rel="stylesheet" type="text/css" href="api/animate.css" />
+   <style>#menus{width: 147px !important;}</style>
 </head>
 <body>
 	<div class="navbar-fixed">
+    	<ul id="menus" class="dropdown-content">
+          <li><a href="javascript:void(0)" class="am-modal-trigger" data-am-target="#docs">Docs</a></li>
+          <li><a href="https://github.com/aminkodaganur/iconplus" target="_blank">View in Github</a></li>
+          <li><a href="https://www.linkedin.com/in/aminkodaganur" target="_blank">Hire me</a></li>
+        </ul>
         <nav>
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo"> icon+ </a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <a href="#" class="brand-logo hide-on-med-and-down"> icon+ </a>
+                <ul id="nav-mobile" class="right">
                     <li><a href="javascript:void(0)" class="am-modal-trigger" data-am-target="#examples-modal">Sample <span class="brand-font">icon+</span></a></li>
                     <li><a href="javascript:void(0)" class="waves-effect am-modal-trigger" data-am-target="#blog-modal">Feedback</a></li>
                     <li style="background-color:#e74c3c;height: 45px;">
@@ -38,12 +44,13 @@
                         	<strong>Download as SVG</strong>
                         </a>
                     </li>
+                    <li><a class="dropdown-button" href="javascript:void(0);" data-activates="menus"><i class="fa fa-bars" style="font-size: 24px;margin-top: -8px;height: 46px;"></i></a></li>
                 </ul>
             </div>
         </nav>
     </div>
 	<div class="row">
-    	<div class="col s12 m3 l3">
+    	<div class="col s4 m3 l3">
             <div class="control-panel">
             	
             	<div class="main-head">Box Shadow</div>
@@ -295,7 +302,7 @@
              </div>
              
         </div>
-    	<div class="col s12 m9 l9 win-height">        	
+    	<div class="col s8 m9 l9 win-height">        	
         	<div class="c-valign-wrapper">
             	<div class="c-valign" id="gen-Icon">
                 
@@ -325,7 +332,7 @@
 				<script type="IN/Share" data-url="https://aminkodaganur.github.io/iconplus/" data-counter="right"></script>
                 
                 <div class="g-plusone" data-size="medium"></div>
-            
+                
             </div>
             <div class="developer">
             	<a href="https://in.linkedin.com/in/aminkodaganur" target="_blank" class="waves-effect">By : Amin Kodaganur</a>
@@ -341,6 +348,87 @@
         </div>
     </section>-->
     <!--####################### Modals ##############################-->
+    <div class="am-modal animated" id="docs">
+    
+    	<div class="am-header">
+        	<h3>Docs<span> If you got any issue please search or write new in Github <a href="#">Issues</a></span> </h3>
+            <a href="javascript:void(0);" class="am-close">X</a>
+        </div>
+        
+        <div class="am-body">
+        	
+            <section class="discription">
+                <h3>Intro</h3>
+                <p>Produce icons with extra effect like long shadow, flat shadow, box effect, circle effect and rounded rectangle effect. It support Dynamic text, Font-awesome icons and also google materialized icon. You can make any Font-awesome icon as line icon and add attractive effect to it dynamically. As a output you will get CSS3 code and also you can export it as SVG file...</p>                
+            </section>
+        	
+            <section class="discription">
+            	<h3>Features</h3>
+                <p>
+                	<ul>
+                    	<li>Adjustable Long shadow for both Text and Box</li>
+                        <li>Adjustable Flat shadow for both Text and Box</li>
+                        <li>Fade on/off option for both Text and Box shadow</li>
+                        <li>Adjustable opacity for shadow</li>
+                        <li>Different Box-radius styles like circle, Square, rounded Square.</li>
+                        <li>
+                        	You can select shadow direction too
+                       		<ul>
+                            	<li>Bottom,</li>
+                                <li>Bottom right,</li>
+                                <li>Right,</li>
+                                <li>Top right,</li>
+                                <li>Top,</li>
+                                <li>Top left,</li>
+                                <li>Left,</li>
+                                <li>Left bottom</li>
+                            </ul>                             
+                        </li>
+                        <li>You can have custom text with custom font color and box color</li>
+                        <li>You can even have font-awesome icon tag or Google Materialized icon tag</li>
+                        <li>You can make font , font-awesome icon and Google Materialized icon as line icon</li>
+                        <li>You can have adjustable font size and box size</li>
+                    </ul>
+                </p>
+            </section>
+            
+            <section class="discription">
+            	<h3>What you get</h3>
+                <p>
+                	<ul>
+                    	<li>It will compile and export HTML and CSS quick code to include in your web application</li>
+                        <li>Or you download it as SVG file and use it as image in your web application</li>
+                    </ul>
+                </p>
+            </section>
+            
+            <section class="discription">
+            	<h3>How to use it</h3>
+                <p>
+                	<ul>
+                    	<li>Step1 : Go to <a href="#">site</a> and build icon with effect however you want</li>
+                        <li>
+                        	Step2: Find “Get Code” or “Download as SVG” button on menu bar and click on any one option 
+                            <p>Get Code: This option will generate code to be pasted on your web application. Paste HTML code wherever you want to render the icon and paste CSS code in style tag in head tag.</p>
+                            <p>Download as SVG: This option will Export a SVG file and you can download it on your local. You just need have one img src=”SVG_File_Path.svg” tag on your web application wherever you want to render the icon.</p>
+                        </li>
+                    </ul>
+                </p>
+            </section>
+            
+            <section class="discription">
+            	<h3>License:</h3>
+                <p>
+                	This project is released under <a href="https://opensource.org/licenses/MIT/">MIT</a> open source license.<br>
+                    And No one is allowed to make any kind of API of this as I will be doing it soon ;)
+                </p>
+            </section>
+            
+        </div>
+    
+    </div>
+    
+    
     <div class="am-modal animated" id="examples-modal">
         <div class="am-header">
         	<h3>Some of the cool sample icons created using <i class="brand-font">icon+</i> </h3>
@@ -530,6 +618,7 @@
 $(document).ready(function(e) {
     $('.modal-trigger').leanModal();
 	$('.slider').slider({full_width: false});
+	$(".button-collapse").sideNav();
 });
 </script>
 <div id="fb-root"></div>
