@@ -1,7 +1,7 @@
 #Find it <a href="https://aminkodaganur.github.io/iconplus/">Here</a>
 
 #Demo
-<img src="https://raw.githubusercontent.com/aminkodaganur/iconplus/gh-pages/promotion.jpg" />
+<img src="https://raw.githubusercontent.com/aminkodaganur/iconplus/gh-pages/promotion.jpg" style="box-shadow:0px 0px 0px rgb(147, 147, 147) ,1px 1px 0px rgb(163, 163, 163) ,2px 2px 0px rgb(178, 178, 178) ,3px 3px 0px rgb(194, 194, 194) ,4px 4px 0px rgb(209, 209, 209) ,	5px 5px 0px rgb(224, 224, 224) ,6px 6px 0px rgb(240, 240, 240) ,7px 7px 0px rgb(255, 255, 255);" />
 
 #Intro 
 Produce icons with extra effect like long shadow, flat shadow, box effect, circle effect and rounded rectangle effect. It support Dynamic text, Font-awesome icons and also google materialized icon. You can make any Font-awesome icon as line icon and add attractive effect to it dynamically. As a output you will get CSS3 code and also you can export it as SVG file...
