@@ -564,6 +564,7 @@ pre {
 
 /* line 1922, ../sass/page-main.scss */
 .ad_section {
-  margin-top: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   text-align: center;
 }
