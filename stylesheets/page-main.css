@@ -561,3 +561,9 @@ pre {
 .discription ul li {
   list-style-type: inherit;
 }
+
+/* line 1922, ../sass/page-main.scss */
+.ad_section {
+  margin-top: 30px;
+  text-align: center;
+}
