@@ -214,7 +214,7 @@ select {
 
 /* line 176, ../sass/page-main.scss */
 .control-panel, .win-height {
-  height: 623px;
+  height: calc(100vh - 45px);
 }
 
 /* line 179, ../sass/page-main.scss */
