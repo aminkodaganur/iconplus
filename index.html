@@ -46,7 +46,7 @@
                     <li style="background-color:#2980b9;height: 45px;"> 
                     	<a href="javascript:void(0)" class="waves-effect am-modal-trigger" id="preview" data-am-target="#downloadModal">
                         	<!---->
-                        	<strong>Download as SVG</strong>
+                        	<strong>Download as png</strong>
                         </a>
                     </li>
                     <li><a class="dropdown-button" href="javascript:void(0);" data-activates="menus"><i class="fa fa-bars" style="font-size: 24px;margin-top: -8px;height: 46px;"></i></a></li>
@@ -685,7 +685,8 @@
             	
             </div>
             <div class="download-icon-btn-cnt">
-            	<a href="javascript:void(0);" id="downloadimage" class="waves-effect"><i class="fa fa-download"> Download</i></a>
+                <!-- <a href="javascript:void(0);" id="downloadimage" class="waves-effect"><i class="fa fa-download"> Download</i></a> -->
+            	<a href="javascript:void(0);" id="downloadimageAspng" class="waves-effect"><i class="fa fa-download"> Download</i></a>
             </div>
             
             <section class="ad_section">
@@ -717,6 +718,7 @@
     <!--#############################################################-->
 <script src="js/jquery-1.11.0.min.js"></script>
 <script src="api/materialize.min.js"></script>
+<script src="api/html2canvas.min.js"></script>
 <script src="js/shadow-gen.js"></script>
 <script src="js/main.js"></script>
 <script src="api/am-modal.js"></script>
@@ -724,7 +726,7 @@
 $(document).ready(function(e) {
     $('.modal-trigger').leanModal();
 	$('.slider').slider({full_width: false});
-	$(".button-collapse").sideNav();
+    $(".button-collapse").sideNav();
 });
 </script>
 <div id="fb-root"></div>

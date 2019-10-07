@@ -1,4 +1,116 @@
-$(document).ready(function(h){function c(a){var c="INPUT"===a.tagName||"TEXTAREA"===a.tagName,f,g;if(c)b=a,f=a.selectionStart,g=a.selectionEnd;else{b=document.getElementById("_hiddenCopyText_");if(!b){var b=document.createElement("textarea");b.style.position="absolute";b.style.left="-9999px";b.style.top="0";b.id="_hiddenCopyText_";document.body.appendChild(b)}b.textContent=a.textContent}var d=document.activeElement;b.focus();b.setSelectionRange(0,b.value.length);var e;try{e=document.execCommand("copy")}catch(h){e=
-!1}d&&"function"===typeof d.focus&&d.focus();c?a.setSelectionRange(f,g):b.textContent="";return e}$("#dynamic-text").on("change",function(){$("#text").html($(this).val())});$("#boxsize").on("input",function(){var a=$(this).val();$("#box").height(a).width(a)});$("#fontsize").on("input",function(){var a=$(this).val();$("#text").css("font-size",a+"px")});$("input[type=radio][name=fontweight]").on("change",function(){var a=$(this).val();$("#text").css("font-weight",a)});$("#font-color").on("blur",function(){var a=
-$(this).val();if(0==/^#[0-9A-F]{6}$/i.test(a)&&""!=a)return alert("Please eneter correct color code. E.g : #8e44ad"),$(this).val(""),!1;$("#text").css("color",a)});$("#preview").on("click",function(){var a=$("#gen-Icon").html();$(".icon-preview").html(a);$(".icon-preview").children("#box").css("box-shadow","none")});document.getElementById("copyhtml").addEventListener("click",function(){c(document.getElementById("html-code"))&&($(this).text("Copied to clipboard"),setTimeout(function(){$("#copyhtml").text("Copy")},
-3E3))});document.getElementById("copycss").addEventListener("click",function(){c(document.getElementById("css-code"))&&($(this).text("Copied to clipboard"),setTimeout(function(){$("#copycss").text("Copy")},3E3))})});
+// JavaScript Document
+$(document).ready(function(e) {
+    
+	//$('.control-panel').height($(window).height()-5);
+	//$('.win-height').height($(window).height());
+	
+	$('#dynamic-text').on('change',function(){
+		$('#text').html($(this).val());
+	});
+		
+	/*$('.more-option-btn').on('click',function(){
+		$('.more-option-cnt').toggle('slow');			
+	});*/
+	
+	$('#boxsize').on('input',function(){
+		var wh = $(this).val();
+		$('#box').height(wh).width(wh);
+	});
+	
+	$('#fontsize').on('input',function(){
+		var size = $(this).val();
+		$('#text').css('font-size',size+'px');
+	});
+	
+	$('input[type=radio][name=fontweight]').on('change',function(){
+		var font = $(this).val();
+		$('#text').css('font-weight',font);
+	});
+	
+	$('#font-color').on('blur',function(){
+		var a = $(this).val();
+		var isOk  = /^#[0-9A-F]{6}$/i.test(a);
+		if(isOk == false && a!=""){
+			alert('Please eneter correct color code. E.g : #8e44ad');
+			$(this).val('');
+			return false;
+		}
+		$('#text').css('color',a);
+		
+	});
+	
+	$('#preview').on('click',function(){
+		var privewIcon = $('#gen-Icon').html();
+		$('.icon-preview').html(privewIcon);
+		$('.icon-preview').children('#box').css('box-shadow','none');
+	});
+	
+	
+	document.getElementById("copyhtml").addEventListener("click", function() {
+		var a = copyToClipboard(document.getElementById("html-code"));
+		if(a){
+			$(this).text('Copied to clipboard');
+			setTimeout(function(){$('#copyhtml').text('Copy')},3000);
+		}
+	});
+	document.getElementById("copycss").addEventListener("click", function() {
+		var a = copyToClipboard(document.getElementById("css-code"));
+		if(a){
+			$(this).text('Copied to clipboard');
+			setTimeout(function(){$('#copycss').text('Copy')},3000);
+		}
+	});
+	
+	function copyToClipboard(elem) {
+		  // create hidden text element, if it doesn't already exist
+		var targetId = "_hiddenCopyText_";
+		var isInput = elem.tagName === "INPUT" || elem.tagName === "TEXTAREA";
+		var origSelectionStart, origSelectionEnd;
+		if (isInput) {
+			// can just use the original source element for the selection and copy
+			target = elem;
+			origSelectionStart = elem.selectionStart;
+			origSelectionEnd = elem.selectionEnd;
+		} else {
+			// must use a temporary form element for the selection and copy
+			target = document.getElementById(targetId);
+			if (!target) {
+				var target = document.createElement("textarea");
+				target.style.position = "absolute";
+				target.style.left = "-9999px";
+				target.style.top = "0";
+				target.id = targetId;
+				document.body.appendChild(target);
+			}
+			target.textContent = elem.textContent;
+		}
+		// select the content
+		var currentFocus = document.activeElement;
+		target.focus();
+		target.setSelectionRange(0, target.value.length);
+		
+		// copy the selection
+		var succeed;
+		try {
+			  succeed = document.execCommand("copy");
+		} catch(e) {
+			succeed = false;
+		}
+		// restore original focus
+		if (currentFocus && typeof currentFocus.focus === "function") {
+			currentFocus.focus();
+		}
+		
+		if (isInput) {
+			// restore prior selection
+			elem.setSelectionRange(origSelectionStart, origSelectionEnd);
+		} else {
+			// clear temporary content
+			target.textContent = "";
+		}
+		return succeed;
+	}
+	
+});
+/*-webkit-text-stroke: 3px rgba(255, 255, 255, 1);
+    color: #1A84CC;*/
